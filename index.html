@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Cuestionario de Cifras Significativas y Vectores</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 10px;
+    }
+
+    h1, h2, p {
+        margin: 10px 0;
+    }
+     p {
+        margin: 10px 0;
+    }
+
+    form {
+        margin: 10px 0;
+    }
+
+    form p {
+        margin: 0;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    input[type="button"] {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #FFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    /* Ajustar el tamaño de los elementos en pantallas pequeñas */
+    @media screen and (max-width: 480px) {
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        form p {
+            font-size: 14px;
+        }
+
+        input[type="button"] {
+            font-size: 14px;
+        }
+    }
+    h1 {
+              font-size: 24px;
+              margin-left: 10px;
+          }
+  
+          img {
+              height: 64px;
+              width: 64px;
+              vertical-align: middle;
+          }
+</style>
+<body>
+    <h1><img src="Logo.png" alt="Logo"> Colegio Cristiano Peniel</h1><br>
+<h1>Primaria Acelerada_Comunicación y Lenguaje</h1>
+    <body>
+      <h1>Formulario de preguntas</h1>
+      <form id="quizForm" onsubmit="return validateQuiz()">
+        <ol>
+          <li>
+            <label for="q1">1. Los artículos indican:</label><br>
+            <input type="radio" name="q1" value="A">A) Acompañamiento de los sustantivos<br>
+            <input type="radio" name="q1" value="B">B) Acompañamientos de los verbos<br>
+            <input type="radio" name="q1" value="C">C) Acompañamientos de los adjetivos<br>
+            <input type="radio" name="q1" value="D">D) NINGUNA<br>
+          </li>
+          <li>
+            <label for="q2">2. Es la palabra que describe al sustantivo</label><br>
+            <input type="radio" name="q2" value="A">A) Adjetivo<br>
+            <input type="radio" name="q2" value="B">B) Sustantivo<br>
+            <input type="radio" name="q2" value="C">C) Verbo<br>
+            <input type="radio" name="q2" value="D">D) NINGUNA<br>
+          </li>
+          <li>
+            <label for="q3">3. El niño rubio juega pelota ¿Es un Adjetivo?</label><br>
+            <input type="radio" name="q3" value="A">A) SI<br>
+            <input type="radio" name="q3" value="B">B) NO<br>
+          </li>
+          <li>
+            <label for="q4">4. Es un lenguaje que se usa de palabras comunes.</label><br>
+            <input type="radio" name="q4" value="A">A) Poesía<br>
+            <input type="radio" name="q4" value="B">B) Libros<br>
+            <input type="radio" name="q4" value="C">C) Juegos<br>
+            <input type="radio" name="q4" value="D">D) NINGUNA<br>
+          </li>
+          <li>
+            <label for="q5">5. Decir por favor es una frase de cortesía.</label><br>
+            <input type="radio" name="q5" value="A">A) SI<br>
+            <input type="radio" name="q5" value="B">B) NO<br>
+          </li>
+          <li>
+            <label for="q6">6. Son palabras que se usan en lugar de los nombres o sustantivos.</label><br>
+            <input type="radio" name="q6" value="A">A) Pronombres<br>
+            <input type="radio" name="q6" value="B">B) Adjetivos<br>
+            <input type="radio" name="q6" value="C">C) Verbos<br>
+            <input type="radio" name="q6" value="D">D) NINGUNA<br>
+          </li>
+          <li>
+            <label for="q7">7. Escriba una oración utilizando pronombres (_El niño juega pelota)</label><br>
+            <input type="text" name="q7" required><br>
+          </li>
+          <li>
+            <label for="q8">8. Es la palabra que expresa acción movimiento o estado.</label><br>
+            <input type="radio" name="q8" value="A">A) Sustantivo<br>
+            <input type="radio" name="q8" value="B">B) Verbo<br>
+            <input type="radio" name="q8" value="C">C) Adjetivo<br>
+            <input type="radio" name="q8" value="D">D) NINGUNA<br>
+          </li>
+          <li>
+            <label for="q9">9. En la oración "mi mamá me regaló un juguete". ¿En qué tiempo verbal está?</label><br>
+            <input type="radio" name="q9" value="A">A) Presente<br>
+            <input type="radio" name="q9" value="B">B) Futuro<br>
+            <input type="radio" name="q9" value="C">C) Pasado<br>
+          </li>
+          <li>
+            <label for="q10">10. En la oración "yo estoy estudiando para la evaluación". ¿En qué tiempo verbal está?</label><br>
+            <input type="radio" name="q10" value="A">A) Presente<br>
+            <input type="radio" name="q10" value="B">B) Futuro<br>
+            <input type="radio" name="q10" value="C">C) Pasado<br>
+          </li>
+          <li>
+            <label for="q11">11. En la oración "iré con mi familia a un viaje". ¿En qué tiempo verbal está?</label><br>
+            <input type="radio" name="q11" value="A">A) Presente<br>
+            <input type="radio" name="q11" value="B">B) Futuro<br>
+            <input type="radio" name="q11" value="C">C) Pasado<br>
+          </li>
+          <li>
+            <label for="q12">12. Es conjunto de palabras que expresan una idea.</label><br>
+            <input type="radio" name="q12" value="A">A) Oraciones<br>
+            <input type="radio" name="q12" value="B">B) Verbos<br>
+            <input type="radio" name="q12" value="C">C) Sustantivos<br>
+            <input type="radio" name="q12" value="D">D) NINGUNA<br>
+          </li>
+          <li>
+            <label for="q13">13. Es un conjunto de oraciones que no expresan una idea.</label><br>
+            <input type="radio" name="q13" value="A">A) Oraciones<br>
+            <input type="radio" name="q13" value="B">B) Frases<br>
+            <input type="radio" name="q13" value="C">C) Verbos<br>
+            <input type="radio" name="q13" value="D">D) NINGUNA<br>
+          </li>
+          <li>
+            <label for="q14">14. Escriba una frase. (Voy a jugar)</label><br>
+            <input type="text" name="q14" required><br>
+          </li>
+          <li>
+            <label for="q15">15. Escriba una oración (Mi mamá juega con migo)</label><br>
+            <input type="text" name="q15" required><br>
+          </li>
+        </ol>
+        <input type="submit" value="Enviar respuestas">
+      </form>
+    
+      <script>
+        function validateQuiz() {
+          // Respuestas correctas
+          const correctAnswers = {
+            q1: 'A',
+            q2: 'A',
+            q3: 'B',
+            q4: 'C',
+            q5: 'A',
+            q6: 'A',
+            q7: '', // No se proporciona respuesta correcta, será validado manualmente
+            q8: 'B',
+            q9: 'C',
+            q10: 'A',
+            q11: 'B',
+            q12: 'A',
+            q13: 'B',
+            q14: '', // No se proporciona respuesta correcta, será validado manualmente
+            q15: '', // No se proporciona respuesta correcta, será validado manualmente
+          };
+    
+          // Obtener respuestas seleccionadas por el usuario
+          const form = document.getElementById('quizForm');
+          const formData = new FormData(form);
+          let userAnswers = {};
+          formData.forEach((value, key) => {
+            userAnswers[key] = value;
+          });
+    
+          // Validar respuestas con excepción de preguntas con campo abierto
+          let score = 0;
+          for (const question in correctAnswers) {
+            if (question !== 'q7' && question !== 'q14' && question !== 'q15') {
+              if (userAnswers[question] === correctAnswers[question]) {
+                score++;
+              }
+            }
+          }
+    
+          // Validar preguntas con campo abierto manualmente
+          const q7Answer = userAnswers['q7'].trim().toLowerCase();
+          const q14Answer = userAnswers['q14'].trim().toLowerCase();
+          const q15Answer = userAnswers['q15'].trim().toLowerCase();
+    
+          if (q7Answer === 'el niño juega pelota' && q14Answer === 'voy a jugar' && q15Answer === 'mi mamá juega conmigo') {
+            score += 3; // Sumar 3 puntos si las respuestas son correctas
+          }
+    
+          // Mostrar resultados
+          alert(`¡Has obtenido ${score} respuestas correctas de 15!`);
+          window.location.href = "contraseña_2.html";
+        }
+                // Verificar si el examen ya ha sido completado previamente y redirigir a contraseña_2.html
+if (localStorage.getItem("formCompleted")) {
+showFinalScore();
+}
+// Verificar si el examen ya se ha completado
+const isExamCompleted = localStorage.getItem('formCompleted') === 'true';
+const isFormLocked = localStorage.getItem('formAbandoned') === 'true';
+// Bloquear la página si el examen no se ha completado
+if (!isExamCompleted && isFormLocked) {
+alert('Esta página se bloque debeido a que usted se salio del formulario, conslute al docente si desea continuar.');
+window.location.href = 'contrasena.html';
+}
+
+// Redirigir a contraseña.html si se abandona el examen o se cambia de página
+window.addEventListener("beforeunload", (event) => {
+                if (!examCompleted) {
+                    localStorage.setItem("formAbandoned", true);
+                    event.preventDefault();
+                    
+                }
+            });
+
+             // Detectar cambios de visibilidad en la página
+             document.addEventListener("visibilitychange", () => {
+                if (document.visibilityState === "hidden") {
+                    examCompleted = true;
+                    localStorage.setItem("formAbandoned", true);
+                    window.location.href = "contrasena.html";
+                }
+            });
+      </script>
+</body>
+</html>
